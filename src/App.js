@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import ReactPlayer from 'react-player';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ReactPlayer
+        className="react-player"
+        // url={item?.url}
+        url={'http://camapp.click/livestream/camera10/stream_0.m3u8'}
+        width={"100%"}
+        height={"100%"}
+        playing={true}
+        controls={true}
+      />
     </div>
   );
 }
